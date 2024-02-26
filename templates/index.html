@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div align="center">
+            {% if type == 'ul' %}
+                <ul>
+                {% for prof in list_of_prof%}
+                    <li>{{ prof }}</li>
+                {% endfor %}
+                </ul>
+            {% elif type == 'ol' %}
+            <ol>
+            {% for prof in list_of_prof%}
+                <li>{{ prof }}</li>
+                {% endfor %}
+            </ol>
+            {% else %}
+                <div class="alert alert-danger" role="alert">
+                    Вы ввели неверный формат списка. Введите /list_prof/ul или /list_prof/ol
+                </div>
+            {% endif %}
+                </div>
+{% endblock %}
