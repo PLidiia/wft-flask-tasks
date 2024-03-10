@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <img src="/static/img/mission_emblem.png" alt="Марс">
+    <h2>Аварийный доступ</h2>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <p>{{ form.username_astr.label }}<br>{{ form.username_astr }}</p>
+        <p>{{ form.password_astr.label }}<br>{{ form.password_astr }}</p>
+        <p>{{ form.username_cap.label }}<br>{{ form.username_cap }}</p>
+        <p>{{ form.password_cap.label }}<br>{{ form.password_cap }}</p>
+        <p>{{ form.access }}</p>
+    </form>
+{% endblock %}
